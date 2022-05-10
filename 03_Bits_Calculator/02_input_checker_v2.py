@@ -1,21 +1,7 @@
-# Functions go at the start
+# checks user choice is 'integer', text' or 'image'
+from cgitb import text
 
-# Put series of symbols at start and end of text (for emphasis of text)
-def statement_generator(text, decoration):
 
-    # Make string with five characters
-    ends = decoration * 5
-
-    # add decoration at start and end of statement
-    statement = "{}  {}  {}".format(ends, text, ends)
-
-    print()
-    print(statement)
-    print()
-
-    return ""
-
-# checks user choice is 'integer', 'text' or image
 def user_choice():
 
     # Lists of valid responses 
@@ -52,22 +38,15 @@ def user_choice():
             # if response is not valid, output an error
             print ("Please choose a valid file type!")
             print()
+        
+        
 
-# Main Routine Goes Here
 
-# Heading
-statement_generator("Bit Calculator for Integers, Text & Images", "-")
 
-# Display instructions if user has not used the program before
-
-# Loop to allow multiple calculations per session
+# Main routine goes here
 keep_going = ""
 while keep_going == "":
-
-    # Ask the user for the file type
     data_type = user_choice()
     print("You chose", data_type)
-    # For integers, ask for integer
-    # (must be an integer more than / equal to 0)
 
-    # For images ask for width and height
+    print()
